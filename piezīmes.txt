@@ -1,0 +1,29 @@
+1. Kas ir HTML?
+HTML (HyperText Markup Language) ir iezīmēšanas valoda, ko izmanto, lai izveidotu tīmekļa lapas. Tā nosaka lapas struktūru, izmantojot dažādus elementus un tagus. HTML tiek interpretēts pārlūkprogrammās, kas vizuāli attēlo lietotājiem tīmekļa saturu.
+
+2. HTML pamatelementi
+HTML dokumenti sastāv no dažādiem elementiem, piemēram:
+
+<html> – apzīmē dokumenta sākumu un beigas.
+<head> – satur meta informāciju, piemēram, lapas nosaukumu (<title>) un CSS stilus.
+<body> – satur visu tīmekļa lapas galveno saturu, piemēram, virsrakstus (<h1>–<h6>), rindkopas (<p>), attēlus (<img>), saites (<a>) un sarakstus (<ul>, <ol>, <li>).
+3. HTML atribūti
+HTML elementi var saturēt atribūtus, kas piešķir tiem papildu informāciju un funkcionalitāti. Piemēram:
+
+<a href="https://example.com">Apmeklē šo vietni</a> – href atribūts nosaka saites adresi.
+<img src="attels.jpg" alt="Apraksts"> – src atribūts norāda attēla ceļu, bet alt nodrošina alternatīvo tekstu.
+<input type="text" placeholder="Ievadi vārdu"> – placeholder atribūts rāda ievades lauka aprakstu.
+4. HTML formas un ievades elementi
+Formas (<form>) tiek izmantotas, lai lietotāji varētu ievadīt un nosūtīt datus. Daži bieži izmantoti ievades elementi:
+
+<input type="text"> – teksta ievades lauks.
+<input type="email"> – e-pasta adresei paredzēts lauks.
+<input type="password"> – parolei paredzēts lauks.
+<button type="submit">Sūtīt</button> – poga datu nosūtīšanai.
+5. HTML un citu tehnoloģiju integrācija
+Lai izveidotu pilnvērtīgas tīmekļa lapas, HTML bieži tiek kombinēts ar citām tehnoloģijām:
+
+CSS – piešķir stilus un dizainu, piemēram, krāsas, izkārtojumu un animācijas.
+JavaScript – pievieno interaktivitāti un dinamisku satura manipulāciju.
+Back-end valodas (PHP, Python, Node.js) – nodrošina servera puses loģiku un datu apstrādi.
+HTML ir tīmekļa izstrādes pamats, un, kombinējot to ar citām tehnoloģijām, iespējams izveidot modernas un funkcionālas tīmekļa lietotnes.
