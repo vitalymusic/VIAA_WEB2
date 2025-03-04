@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    font-size: 14pt;
+    color: #08090a;
+    font-family: "Poppins", sans-serif;
+
+    
+
+}
+
+body{
+    background-color: #f4faff;
+
+}
+
+h1,h2,h3{
+    font-weight: 300;
+    text-align: center;
+    background-color: #7cc6fe;
+    padding: 10px;
+}
+
+h1{
+    /* font-size: 50pt;
+    font-size: 50px; */
+    font-size: 3.5rem;
+
+}
+h2{
+    font-size: 2rem;    
+}
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    width:50%;
+    margin-left: 5rem;
+}
+ul{
+    margin-left: 6.5rem;
+    width:75%;
+}
+
+
+.satura_bloks{
+    border: 2px solid #8789c0;
+    border-radius: 10px;
+    width: 75%;
+    margin:auto;
+
+}
