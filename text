@@ -1,3 +1,5 @@
+Replace < with &lt; and > with &gt;.
+
 HTML elementi var saturēt atribūtus, kas piešķir tiem papildu informāciju un funkcionalitāti. Piemēram:
 
 &lt;a href="https://example.com"&gt;Apmeklē šo vietni&lt;/a&gt; – href atribūts nosaka saites adresi.
