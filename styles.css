@@ -4,13 +4,14 @@
     font-size: 14pt;
     color: #08090a;
     font-family: "Poppins", sans-serif;
-
-    
-
 }
 
 body{
     background-color: #f4faff;
+    background-image: url("./5544.png");
+    background-attachment: fixed;
+    margin:0px;
+    padding: 0px;
 
 }
 
@@ -18,7 +19,7 @@ h1,h2,h3{
     font-weight: 300;
     text-align: center;
     background-color: #7cc6fe;
-    padding: 10px;
+    padding: 10px 50px;
 }
 
 h1{
@@ -68,12 +69,94 @@ ul{
 .pirma_lapa_saturs section{
      background-color: #c4e5ff;   
      padding: 20px 20px;
+     /* width: 25%; */
+     width: calc(70%/3);
 }
 
 .pirma_lapa_saturs h3{
     background-color: transparent;
+    padding: 0px;
 }
 .pirma_lapa_saturs p{
     width: 100%;
     margin:0px;
+    height: 170px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    /* white-space:wrap; */
+    margin-bottom: 20px;
+}
+section{
+    overflow: hidden;
+}
+
+section a{
+    float: right;
+    margin-right: 20px;
+    padding: 10px;
+    border: 3px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color:#08090a;
+    background-color: #c4e5ff;
+}
+
+section a:hover{
+    background: #7cc6fe;
+    transition: .5s ease;
+}
+
+
+nav{
+    background: #08090a;
+    padding:10px 20px;
+    display: flex;
+    justify-content: center;
+    gap:15px;
+    position: sticky;
+    top:0px;
+}
+
+nav a{
+    display: block;
+    padding: 5px 10px;
+    color: #f4faff;
+    text-decoration: none;
+}
+
+
+nav a:not(.active_nav):hover {
+    background-color: #f4faff3f;
+    transition: all .5s ease;
+}
+
+.active_nav{
+    background-color: #f4faff;
+    color:#08090a;
+}
+h1::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 40%;
+    margin: auto;
+    background-color: #08090a;
+}
+
+.icon{
+    text-align: center;
+    font-size: 2rem;
+    color: #f4faff;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.474);
+}
+
+
+.contacts_wrap{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contacts_wrap > div{
+    width: calc(85%/2);
 }
