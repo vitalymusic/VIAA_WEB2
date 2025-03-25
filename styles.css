@@ -267,7 +267,7 @@ footer:after{
     }
 
 
-    #modal1 button{
+    #modal1 button,.button{
         width: 200px;
         display: block;
         padding: 5px 10px;
@@ -276,8 +276,9 @@ footer:after{
         background-color: #73c2ff;
         cursor: pointer;
         font-size: 1rem;
+        transition: .3s ease-in;
     }
-    #modal1 button:hover{
+    #modal1 button:hover, .button:hover{
         background-color: #63a9de;
     }
 
@@ -285,3 +286,28 @@ footer:after{
     
 
 /* modālais logs */
+
+
+
+/* Preview */
+
+.skata_poga{
+    margin: 20px auto;
+}
+
+.preview{
+    margin: 50px auto;
+    box-sizing: content-box;
+    padding: 10px 20px;
+    background-color: white;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.show{
+    opacity: 1;
+    height: 108px;
+    transition: all .5s ease-in-out;
+}
