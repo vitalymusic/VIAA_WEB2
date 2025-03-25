@@ -23,7 +23,7 @@ let modalData = [
     }
 ]
     let buttons = document.querySelectorAll("#saturs1 a");
-    
+
     for(button of buttons){
         button.onclick = function(event){
             event.preventDefault();
@@ -56,6 +56,17 @@ function openModal(number){
 dialogCloseBtn.onclick = function(event){
     // event.preventDefault();
     event.target.parentElement.parentElement.style.display = "none"; 
-
-
 }
+
+modal.onclick = function(event){
+    // return console.log(event.target);
+    if(event.target == modal){
+        this.style.display = "none"; 
+    }
+    
+}
+
+
+// ()=>{
+// } arrow function (nav atsauces 'this')
+
