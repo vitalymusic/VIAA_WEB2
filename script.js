@@ -22,19 +22,27 @@ let modalData = [
         p:"JavaScript ir programmēšanas valoda, kas pievieno interaktivitāti un dinamisku funkcionalitāti tīmekļa lapām, piemēram, formu validāciju, animācijas un lietotāju darbību apstrādi."
     }
 ]
+    let buttons = document.querySelectorAll("#saturs1 a");
+    
+    for(button of buttons){
+        button.onclick = function(event){
+            event.preventDefault();
+            openModal(event.target.dataset.dialog)
+        }
+    }
 
-dialogBtn1.onclick = function(event){
-    event.preventDefault();
-    openModal(0);
-}
-dialogBtn2.onclick = function(event){
-    event.preventDefault();
-    openModal(1);
-}
-dialogBtn3.onclick = function(event){
-    event.preventDefault();
-    openModal(2);
-}
+// dialogBtn1.onclick = function(event){
+//     event.preventDefault();
+//     openModal(0);
+// }
+// dialogBtn2.onclick = function(event){
+//     event.preventDefault();
+//     openModal(1);
+// }
+// dialogBtn3.onclick = function(event){
+//     event.preventDefault();
+//     openModal(2);
+// }
 
 function openModal(number){
     modal.querySelector("img").src = modalData[number].img;
