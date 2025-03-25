@@ -155,7 +155,10 @@ h1::after{
 
 .contacts_wrap{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+    box-shadow: 2px 4px 10px rgb(0, 255, 140);
+    
 }
 
 .contacts_wrap > div{
