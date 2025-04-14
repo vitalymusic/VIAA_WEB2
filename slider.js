@@ -65,3 +65,13 @@ rightBtn.onclick = ()=>{
     console.log(activeSlide);
 }
 
+
+leftBtn.onclick = ()=>{
+    activeSlide--;
+    if(activeSlide < 0){
+        activeSlide = sliderData.length-1;
+    }
+    showSlide(activeSlide);
+    console.log(activeSlide);
+}
+
