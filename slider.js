@@ -1,0 +1,67 @@
+let sliderData = [
+    {
+        id: 1,
+        slideTitle: 'Kiberdrošība',
+        slideImage: 'https://placehold.co/1200x400/orange/white',
+        slideDescription: 'Kiberdrošība aizsargā datus un sistēmas pret kiberuzbrukumiem.',
+        langIcon: 'lv',
+    },
+    {
+        id: 2,
+        slideTitle: 'психология',
+        slideImage: 'https://placehold.co/1200x400/blue/white',
+        slideDescription: 'Психология изучает поведение, мышление и эмоции человека в обществе.',
+        langIcon: 'ru',
+    },
+    {
+        id: 3,
+        slideTitle: 'Business administration',
+        slideImage: 'https://placehold.co/1200x400/grey/white',
+        slideDescription: 'Business administration manages operations, finance, marketing, and strategy for organizations.',
+        langIcon: 'en',
+    }
+];
+
+
+function showSlides(data,element){
+    document.querySelector(element).innerHTML = "";
+
+    for(slider of data){
+        document.querySelector(element).innerHTML += `
+        <div class="slide">
+                <h3 class="slideTitle">${slider.slideTitle}</h3>
+                <img src="${slider.slideImage}" alt="${slider.slideTitle}">
+                <p class="slideDesc">${slider.slideDescription}</p>
+                <span class="langIcon"><img src="${slider.langIcon}.svg" alt=""></span>
+                <button id="subscibe" data-course-id="${slider.id}">Pierakstīties uz kursu</button>
+        </div>
+    `;
+    }
+}
+
+showSlides(sliderData,"#slider .center");
+
+function showSlide(slideNumber){
+    let slides = document.querySelectorAll(".slide");
+    slides.forEach((slide)=>{
+        slide.style.display="none";
+    })
+    slides[slideNumber].style.display="flex";
+}
+
+let activeSlide = 0;
+showSlide(activeSlide);
+
+let leftBtn = document.querySelector("#leftBtn");
+let rightBtn = document.querySelector("#rightBtn");
+
+
+rightBtn.onclick = ()=>{
+    activeSlide++;
+    if(activeSlide > sliderData.length-1){
+        activeSlide = 0;
+    }
+    showSlide(activeSlide);
+    console.log(activeSlide);
+}
+

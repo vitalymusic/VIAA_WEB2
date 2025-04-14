@@ -27,6 +27,7 @@
 
        & .slide{
         display: flex;
+        
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -38,6 +39,9 @@
         & p{
             text-align: justify;
 
+        }
+        & .langIcon img{
+            width: 100px;
         }
 
 
