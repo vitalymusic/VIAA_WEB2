@@ -29,7 +29,7 @@ function showSlides(data,element){
     for(slider of data){
         document.querySelector(element).innerHTML += `
         <div class="slide animate__animated">
-                <h3 class="slideTitle">${slider.slideTitle}</h3>
+                <h3 class="slideTitle animate__animated animate__fadeOutDown">${slider.slideTitle}</h3>
                 <img src="${slider.slideImage}" alt="${slider.slideTitle}">
                 <p class="slideDesc">${slider.slideDescription}</p>
                 <span class="langIcon"><img src="${slider.langIcon}.svg" alt=""></span>
@@ -52,6 +52,14 @@ function showSlide(slideNumber){
     slides[slideNumber].style.display="flex";
     slides[slideNumber].classList.add('animate__fadeIn');
     slides[slideNumber].classList.replace('animate__fadeOut','animate__fadeIn');
+    slides[slideNumber].querySelector("img").onmouseover = (e)=>{
+        console.log(e);
+        slides[slideNumber].querySelector('h3').classList.replace('animate__fadeOutDown','animate__fadeInUp');
+    }
+    slides[slideNumber].querySelector("img").onmouseleave = ()=>{
+        slides[slideNumber].querySelector('h3').classList.replace('animate__fadeInUp','animate__fadeOutDown');
+    }
+
   
     
 
@@ -70,17 +78,24 @@ rightBtn.onclick = ()=>{
     if(activeSlide > sliderData.length-1){
         activeSlide = 0;
     }
-    showSlide(activeSlide);
+    setTimeout(()=>{
+        showSlide(activeSlide)
+    },500);
+
     console.log(activeSlide);
 }
 
 
 leftBtn.onclick = ()=>{
+    document.querySelector(".animate__fadeIn").classList.replace('animate__fadeIn','animate__fadeOut');
     activeSlide--;
     if(activeSlide < 0){
         activeSlide = sliderData.length-1;
     }
-    showSlide(activeSlide);
+
+    setTimeout(()=>{
+        showSlide(activeSlide)
+    },500);
     console.log(activeSlide);
 }
 
