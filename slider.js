@@ -46,7 +46,6 @@ function showSlide(slideNumber){
     let slides = document.querySelectorAll(".slide");
     slides.forEach((slide)=>{
         slide.style.display="none";
-        
     })
 
     slides[slideNumber].style.display="flex";
@@ -59,10 +58,6 @@ function showSlide(slideNumber){
     slides[slideNumber].querySelector("img").onmouseleave = ()=>{
         slides[slideNumber].querySelector('h3').classList.replace('animate__fadeInUp','animate__fadeOutDown');
     }
-
-  
-    
-
 }
 
 let activeSlide = 0;
