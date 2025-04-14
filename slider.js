@@ -28,7 +28,7 @@ function showSlides(data,element){
 
     for(slider of data){
         document.querySelector(element).innerHTML += `
-        <div class="slide">
+        <div class="slide animate__animated">
                 <h3 class="slideTitle">${slider.slideTitle}</h3>
                 <img src="${slider.slideImage}" alt="${slider.slideTitle}">
                 <p class="slideDesc">${slider.slideDescription}</p>
@@ -42,11 +42,19 @@ function showSlides(data,element){
 showSlides(sliderData,"#slider .center");
 
 function showSlide(slideNumber){
+
     let slides = document.querySelectorAll(".slide");
     slides.forEach((slide)=>{
         slide.style.display="none";
+        
     })
+
     slides[slideNumber].style.display="flex";
+    slides[slideNumber].classList.add('animate__fadeIn');
+    slides[slideNumber].classList.replace('animate__fadeOut','animate__fadeIn');
+  
+    
+
 }
 
 let activeSlide = 0;
@@ -57,6 +65,7 @@ let rightBtn = document.querySelector("#rightBtn");
 
 
 rightBtn.onclick = ()=>{
+    document.querySelector(".animate__fadeIn").classList.replace('animate__fadeIn','animate__fadeOut');
     activeSlide++;
     if(activeSlide > sliderData.length-1){
         activeSlide = 0;
