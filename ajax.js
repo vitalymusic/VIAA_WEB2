@@ -65,9 +65,6 @@ fetch(API)
     console.log("Bildes ir ielādētas");
 })
 
-
-
-
 function bildes(data){
     console.log(data);
 
@@ -79,9 +76,3 @@ function bildes(data){
     }
 
 }
-
-
-
-
-
-
