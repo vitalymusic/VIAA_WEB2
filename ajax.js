@@ -128,9 +128,6 @@ if(formError==""){
             }
         })
 
-
-
-
 }else{
     pazinot(formError);
 }
@@ -142,6 +139,5 @@ function pazinot(text){
     document.querySelector(".right_footer").innerHTML += `
         <div class="alert">${text}</div>
     `;
-
 }
 }
