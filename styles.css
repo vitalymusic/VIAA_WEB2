@@ -320,3 +320,21 @@ footer:after{
 }
 
 
+table{
+    width: 75%;
+    margin: 20px auto;
+    border-collapse:collapse
+}
+table tr, table td{
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.galleryPicsum{
+    width: 75%;
+    display: grid;
+    gap:10px;
+    grid-template-columns: auto auto auto;
+    margin: 20px auto;
+}
+

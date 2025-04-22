@@ -1,0 +1,25 @@
+{
+    "kursi": [
+      {
+        "title": "Tīmekļa izstrāde",
+        "description": "Apguvusi HTML, CSS un JavaScript pamatus, lai veidotu un dizainētu tīmekļa vietnes."
+      },
+      {
+        "title": "Datu zinātne",
+        "description": "Izpētiet datu analīzes, vizualizācijas un mašīnmācīšanās tehnikas, izmantojot Python."
+      },
+      {
+        "title": "Kiberdrošība",
+        "description": "Izprotiet tīkla drošības, kriptogrāfijas un riska pārvaldības principus."
+      },
+      {
+        "title": "Mākoņdatošana",
+        "description": "Iegūstiet zināšanas par mākoņpakalpojumiem, izvietošanas modeļiem un mākoņu arhitektūru."
+      },
+      {
+        "title": "Mobilās lietotnes izstrāde",
+        "description": "Izstrādājiet mobilās lietotnes Android un iOS, izmantojot tādas ietvarstruktūras kā React Native."
+      }
+    ]
+  }
+  

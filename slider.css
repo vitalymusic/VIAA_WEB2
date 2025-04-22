@@ -37,6 +37,7 @@
         & .slideTitle{
             text-align: center;
             background-color: transparent;
+            /* opacity: 0 !important; */
         }
 
         & p{
