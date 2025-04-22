@@ -95,8 +95,8 @@ forma.onsubmit = (e)=>{
     e.preventDefault();
     if(document.querySelector('form #name').value.length < 3){
          formError = "Izlabojiet formu!"
-    }else if( document.querySelector('form #email').value.match(/^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gim)){
-        formError = "Izlabojiet Epastu!"
+    //}else if(document.querySelector('form #email').value.match(/^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gim)){
+        //formError = "Izlabojiet Epastu!"
     }else if(document.querySelector('form #phone').value.length < 6){
         formError = "Izlabojiet tālruni!"
     }else if(document.querySelector('form #message').value.length < 10){
@@ -106,8 +106,8 @@ forma.onsubmit = (e)=>{
     }
 
 if(formError==""){
-    console.log("forma nosūtīta");
-    return;
+    // console.log("forma nosūtīta");
+    // return;
 
     data = new FormData(forma);
 
@@ -120,7 +120,7 @@ if(formError==""){
         body:data
         })
         .then((ans)=>{
-            console.log(ans);    
+            // console.log(ans);    
             if(ans.ok){
                 // alert("Dati nosūtīti");
                 forma.reset();
