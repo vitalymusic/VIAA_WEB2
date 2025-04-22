@@ -87,3 +87,29 @@ function bildes(data){
 // 3. Formas datu atlase un nosūtīšana vaicājuma ķermenī (body)
 
 
+
+let forma = document.querySelector("#contact_form");
+
+forma.onsubmit = (e)=>{
+    e.preventDefault();
+    data = FormData(forma);
+
+    fetch('https://www.formbackend.com/f/758f8c26094b0112',
+        {
+         headers: {    
+         "accept": "application/javascript"
+        },    
+        method:"POST",
+        body:data
+        })
+        .then((ans)=>{
+            console.log(ans);    
+            if(ans.status=="ok"){
+                alert("Dati nosūtīti");
+            }
+        })
+
+
+
+
+}
