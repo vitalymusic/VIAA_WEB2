@@ -110,9 +110,12 @@ if(formError==""){
     // return;
 
     data = new FormData(forma);
+    let test = "https://postman-echo.com/post";
+    let formbackend = 'https://www.formbackend.com/f/758f8c26094b0112';
 
-    fetch('https://www.formbackend.com/f/758f8c26094b0112',
+    fetch(formbackend,
         {
+        mode: 'no-cors',   
          headers: {    
          "accept": "application/javascript"
         },    
