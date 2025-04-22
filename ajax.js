@@ -76,3 +76,14 @@ function bildes(data){
     }
 
 }
+
+
+
+// Formu datu nosūtīšana ar JS
+
+
+// 1. Jāatrod formas elements
+// 2. Jāpastrādā formas nosūtīšanas notikums (Submit)
+// 3. Formas datu atlase un nosūtīšana vaicājuma ķermenī (body)
+
+
