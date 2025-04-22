@@ -338,3 +338,10 @@ table tr, table td{
     margin: 20px auto;
 }
 
+.alert{
+    background-color: #e33008;
+    color:white;
+    padding: 15px;
+    text-align: center;
+}
+

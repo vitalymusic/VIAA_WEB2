@@ -91,8 +91,25 @@ function bildes(data){
 let forma = document.querySelector("#contact_form");
 
 forma.onsubmit = (e)=>{
+    formError = "";
     e.preventDefault();
-    data = FormData(forma);
+    if(document.querySelector('form #name').value.length < 3){
+         formError = "Izlabojiet formu!"
+    }else if( document.querySelector('form #email').value.match(/^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gim)){
+        formError = "Izlabojiet Epastu!"
+    }else if(document.querySelector('form #phone').value.length < 6){
+        formError = "Izlabojiet tālruni!"
+    }else if(document.querySelector('form #message').value.length < 10){
+        formError = "Ziņojumam jāsastāv vismaz no 10 simboliem!"
+    }else{
+        formError = "";
+    }
+
+if(formError==""){
+    console.log("forma nosūtīta");
+    return;
+
+    data = new FormData(forma);
 
     fetch('https://www.formbackend.com/f/758f8c26094b0112',
         {
@@ -104,12 +121,27 @@ forma.onsubmit = (e)=>{
         })
         .then((ans)=>{
             console.log(ans);    
-            if(ans.status=="ok"){
-                alert("Dati nosūtīti");
+            if(ans.ok){
+                // alert("Dati nosūtīti");
+                forma.reset();
+                pazinot("Dati nosūtīti");
             }
         })
 
 
 
 
+}else{
+    pazinot(formError);
+}
+
+
+
+function pazinot(text){
+    forma.style.display="none";
+    document.querySelector(".right_footer").innerHTML += `
+        <div class="alert">${text}</div>
+    `;
+
+}
 }
