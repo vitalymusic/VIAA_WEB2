@@ -70,8 +70,9 @@ function bildes(data){
 
     for(bilde of data){
         document.querySelector('.galleryPicsum').innerHTML+=`
-            <img src="${bilde.
-                download_url}" width="100%">
+            <a href="${bilde.
+                download_url}" data-lightbox="image-1" data-title="My caption"><img src="${bilde.
+                download_url}" width="100%"></a>
         `;
     }
 
